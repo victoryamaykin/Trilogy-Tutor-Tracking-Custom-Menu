@@ -114,7 +114,9 @@ if (response.getSelectedButton() == ui.Button.OK) {
 "<strong>CC Central Support on all email by always using REPLY ALL.</strong><br><br>" +
 "Sincerely,<br><!--YOUR NAME-->";
 
-var subject = 'Data Analytics Boot Camp - Tutorial Available';
+// ENTER THE SPECIFIC COURSE (DV, FSF, etc.) FOR THE SUBJECT LINE
+
+var subject = 'Coding Boot Camp - Tutorial Available';
 
 // Create the email draft
 
@@ -174,6 +176,8 @@ function weekly(email) {
 "If you would like to schedule regular, recurring sessions at the same day/time each week, just let me know by REPLY ALL and we can work it out.  This is particularly useful if you have a strict schedule so you won't have to compete for time on my calendar.<br><br>" +
 "<strong>CC Central Support on all email by always using REPLY ALL.</strong><br><br>" +
 "Sincerely,<br><!--ENTER YOUR NAME-->";
+
+// ENTER THE SPECIFIC COURSE (DV, FSF, etc.) FOR THE SUBJECT LINE
 
   var subject = "Coding Boot Camp - Tutorial Available";
 
