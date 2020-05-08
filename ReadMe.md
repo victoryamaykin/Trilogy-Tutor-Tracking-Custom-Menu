@@ -1,7 +1,8 @@
 ## Trilogy Tutor Tracking Sheet - Custom Menu Items 
-**Send Intro Email and Auto-Weekly Tutorial Available Email**
+
+### by Victor Yamaykin, Senior Data Visualization Tutor
+
 <hr>
-## by Victor Yamaykin, Senior Data Visualization Tutor
 
 **Description:**
 
