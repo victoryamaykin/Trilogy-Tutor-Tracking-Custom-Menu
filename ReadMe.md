@@ -22,11 +22,17 @@ Using the project triggers, you can have the emails sent automatically to your D
 
 **Installation:**
 
-1. Under **Tools > Script Editor**, click "Start a New Project".
+1. From the Tutor Tracking sheet, select the menu item **Tools > Script Editor**.
 
-2. Copy the script shown below. 
+2. If this is the first time you've been to script.google.com, you'll be redirected to a page that introduces Apps Script. 
+Click **Start Scripting** to proceed to the script editor.
 
-3. Enter your calendly link for the variable "calendly", then copy and paste the link inside the message for display text, and lastly add your name. 
+3. A welcome screen will ask what kind of script you want to create. Click **Blank Project** or **Close**.
+Delete any code in the script editor and paste in the code below.
+
+4. Enter your calendly link for the variable "calendly", then copy and paste the link inside the message for display text, and add your name where needed. 
+
+5. Select the menu item **File > Save**. Name your new script and click **OK**.
 
 ```javascript
 // Create a new menu item called Send Emails with a dropdown box
@@ -191,11 +197,13 @@ function weekly(email) {
 
 ![Current project trigger settings](/images/script-editor-example.png)
 
-4. To set up the automatic email drafts, go to **Edit > Current Project's Triggers** to set up a schedule to run the weekly() function at a time that suits you. Click **+ Add Trigger** in the bottom right corner as shown below. These are the settings that I use: "time-driven, weekly timer, every Friday, from 9 to 10am, notify me immediately if there's an error."
+6. To set up the automatic email drafts, go to **Edit > Current Project's Triggers** to set up a schedule to run the weekly() function at a time that suits you. Click **+ Add Trigger** in the bottom right corner as shown below. These are the settings that I use: "time-driven, weekly timer, every Friday, from 9 to 10am, notify me immediately if there's an error."
 
 ![Current project trigger settings](/images/project-trigger-setup.png)
 
-5. Now you have custom menu item buttons to "Send intro email" to a new student on your roster and "Send weekend email" if you prefer sending manually. Thanks for your time! ^_^
+7. If you select the menu item **Run**, a dialog box will appear and tell you that the script requires authorization. Click **Continue**. A second dialog box will then request authorization for specific Google services. Read the notice, then click **Allow**.
+
+8. Close the tutor tracking speadsheet and reopen. Now you have custom menu item buttons to "Send intro email" to a new student on your roster and "Send weekend email" if you prefer sending manually. Thanks for your time! ^_^
 
 **Notes:**
 
