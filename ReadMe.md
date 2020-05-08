@@ -28,12 +28,6 @@ Using the project triggers, you can have the emails sent automatically to your D
 
 3. Enter your calendly link for the variable "calendly", then copy and paste the link inside the message for display text, and lastly add your name. 
 
-4. To set up the automatic email drafts, go to **Edit > Current Project's Triggers** to set up a schedule to run the weekly() function at a time that suits you. Click **+ Add Trigger** in the bottom right corner as shown below. These are the settings that I use: "time-driven, weekly timer, every Friday, from 9 to 10am, notify me immediately if there's an error."
-
-![Current project trigger settings](/images/project-trigger-setup.png)
-
-5. Now you have custom menu item buttons to "Send intro email" to a new student on your roster and "Send weekend email" if you prefer sending manually. Thanks for your time! ^_^
-
 ```javascript
 // Create a new menu item called Send Emails with a dropdown box
 
@@ -197,6 +191,11 @@ function weekly(email) {
 
 ![Current project trigger settings](/images/script-editor-example.png)
 
+4. To set up the automatic email drafts, go to **Edit > Current Project's Triggers** to set up a schedule to run the weekly() function at a time that suits you. Click **+ Add Trigger** in the bottom right corner as shown below. These are the settings that I use: "time-driven, weekly timer, every Friday, from 9 to 10am, notify me immediately if there's an error."
+
+![Current project trigger settings](/images/project-trigger-setup.png)
+
+5. Now you have custom menu item buttons to "Send intro email" to a new student on your roster and "Send weekend email" if you prefer sending manually. Thanks for your time! ^_^
 
 **Notes:**
 
