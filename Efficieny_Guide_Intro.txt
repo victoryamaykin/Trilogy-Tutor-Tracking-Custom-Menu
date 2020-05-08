@@ -1,6 +1,6 @@
 Hi all, 
 
-I wanted to add some custom menu items to the Tutor Tracking Spreadsheet to send the intro and weekly tutorial availability email. 
+I wanted to add some custom menu items to the Tutor Tracking Spreadsheet to send the intro and weekly tutorial availability emails. 
 
 After entering a new student's information on your roster, you will be able to click on the "Send Emails" menu and select "Send Intro Email".
 The function will send a draft of the email to your Gmail folder labeled "Drafts". 
@@ -11,7 +11,7 @@ That way you can verify before sending them out just in case if someone is no lo
 
 Using the project triggers, you can have the emails sent automatically to your Drafts folder every week. 
 
-* The detailed requirements and script are located on the README of the Github repo located here:
+* The detailed requirements and script are located on the README of the Github repo located here: https://github.com/victoryamaykin/Trilogy-Tutor-Tracking-Custom-Menu
 
 If you have any questions or issues, please email me at victor.yamaykin@gmail.com, and I'll help you get it working.
 

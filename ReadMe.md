@@ -6,8 +6,14 @@
 
 **Description:**
 
-This is a script for the Google Tutor Tracking Spreadsheet. It may help some with getting started, however it requires a gmail account.
-It will send a separate draft of the weekend email for each student (and CC to Central Support). That way you can verify before sending them out just in case some of them are no longer on your student roster. Using the project triggers, you can have the emails sent automatically to your Drafts folder every week. Please let me know if you have any feedback on the code!
+This is a script for the Google Tutor Tracking Spreadsheet. After entering a new student's information on your roster, you will be able to click on the "Send Emails" menu and select "Send Intro Email".
+The function will send a draft of the email to your Gmail folder labeled "Drafts". 
+
+For the weekly availability email, the function will send a separate draft of the weekend email for each student (and CC to Central Support). 
+
+That way you can verify before sending them out just in case if someone is no longer on your student roster. 
+
+Using the project triggers, you can have the emails sent automatically to your Drafts folder every week. 
 
 **Requirements:**
 
@@ -16,9 +22,9 @@ It will send a separate draft of the weekend email for each student (and CC to C
 
 **Installation:**
 
-1. Under **Tools > Script Editor** then "Start a New Project"
+1. Under **Tools > Script Editor**, click "Start a New Project".
 
-2. Copy the following code
+2. Copy the script shown below. 
 
 3. Enter your calendly link for the variable "calendly", then copy and paste the link inside the message for display text, and lastly add your name. 
 
@@ -26,7 +32,7 @@ It will send a separate draft of the weekend email for each student (and CC to C
 
 ![Current project trigger settings](/images/project-trigger-setup.png)
 
-5. Now you have a custom menu item button to "Send intro email" to a new student on your roster and "Send weekend email" if you prefer sending manually. Thanks for your time! ^_^
+5. Now you have a custom menu item buttons to "Send intro email" to a new student on your roster and "Send weekend email" if you prefer sending manually. Thanks for your time! ^_^
 
 ```javascript
 // Create a new menu item called Send Emails with a dropdown box
