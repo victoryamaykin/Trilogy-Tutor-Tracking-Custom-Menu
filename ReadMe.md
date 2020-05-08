@@ -182,6 +182,11 @@ function weekly(email) {
 
 ```
 
+**Result:**
+
+![Current project trigger settings](/images/script-editor-example.png)
+
+
 **Notes:**
 
 * I haven't tested functionality with a non-gmail account, so please let me know if that would be helpful. 
