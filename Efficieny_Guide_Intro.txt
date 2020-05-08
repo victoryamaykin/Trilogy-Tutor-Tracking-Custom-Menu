@@ -7,7 +7,7 @@ The function will send a draft of the email to your Gmail folder labeled "Drafts
 
 For the weekly availability email, the function will send a separate draft of the weekend email for each student (and CC to Central Support). 
 
-That way you can verify before sending them out just in case some of them are no longer on your student roster. 
+That way you can verify before sending them out just in case if someone is no longer on your student roster. 
 
 Using the project triggers, you can have the emails sent automatically to your Drafts folder every week. 
 

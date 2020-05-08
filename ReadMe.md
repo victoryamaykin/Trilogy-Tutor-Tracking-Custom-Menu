@@ -1,7 +1,7 @@
 ## Trilogy Tutor Tracking Sheet - Custom Menu Items 
 **Send Intro Email and Auto-Weekly Tutorial Available Email**
 <hr>
-### by Victor Yamaykin, Senior Data Visualization Tutor
+## by Victor Yamaykin, Senior Data Visualization Tutor
 
 **Description:**
 
@@ -19,9 +19,9 @@ It will send a separate draft of the weekend email for each student (and CC to C
 
 2. Copy the following code
 
-3. Enter your calendly link for the variable "calendly", then copy the display text of the link inside the message, and lastly add your name. 
+3. Enter your calendly link for the variable "calendly", then copy and paste the link inside the message for display text, and lastly add your name. 
 
-4. To set up the automatic email drafts, go to **Edit > Current Project's Triggers** to set up a schedule to run the weekly() function at a time that suits you.
+4. To set up the automatic email drafts, go to **Edit > Current Project's Triggers** to set up a schedule to run the weekly() function at a time that suits you. Click **+ Add Trigger** in the bottom right corner as shown below. These are the settings that I use: "time-driven, weekly timer, every Friday, from 9 to 10am, notify me immediately if there's an error."
 
 ![Current project trigger settings](/images/project-trigger-setup.png)
 
