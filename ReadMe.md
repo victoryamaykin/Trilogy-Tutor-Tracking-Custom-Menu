@@ -32,7 +32,7 @@ Using the project triggers, you can have the emails sent automatically to your D
 
 ![Current project trigger settings](/images/project-trigger-setup.png)
 
-5. Now you have a custom menu item buttons to "Send intro email" to a new student on your roster and "Send weekend email" if you prefer sending manually. Thanks for your time! ^_^
+5. Now you have custom menu item buttons to "Send intro email" to a new student on your roster and "Send weekend email" if you prefer sending manually. Thanks for your time! ^_^
 
 ```javascript
 // Create a new menu item called Send Emails with a dropdown box
