@@ -1,0 +1,14 @@
+Hi all, 
+
+I wanted to add some custom menu items to the Tutor Tracking Spreadsheet. 
+
+It will send a separate draft of the weekend email for each student (and CC to Central Support). That way you can verify before sending them out just in case some of them are no longer on your student roster. Using the project triggers, you can have the emails sent automatically to your Drafts folder every week. Please let me know if you have any feedback on the code!
+For your Tutor Tracking Spreadsheet, make sure there's a separate sheet named "Student Roster".
+
+The detailed requirements and script are located on the README of the Github repo located here:
+
+If you have any questions or issues, please email me at victor.yamaykin@gmail.com, and I'll help you get it working.
+
+Also, please feel free to contribute to the project on Github
+
+- Victor Yamaykin, Data Viz Senior Tutor
