@@ -1,7 +1,7 @@
 ## Trilogy Tutor Tracking Sheet - Custom Menu Items 
-**Auto-Weekly Confirmation Emailer**
+**Send Intro Email and Auto-Weekly Tutorial Available Email**
 <hr>
-###by Victor Yamaykin, Senior Data Visualization Tutor
+### by Victor Yamaykin, Senior Data Visualization Tutor
 
 **Description:**
 
@@ -28,13 +28,18 @@ It will send a separate draft of the weekend email for each student (and CC to C
 5. Now you have a custom menu item button to "Send intro email" to a new student on your roster and "Send weekend email" if you prefer sending manually. Thanks for your time! ^_^
 
 ```javascript
+// Create a new menu item called Send Emails with a dropdown box
+
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
   ui.createMenu('Send Emails')
-      .addItem('Intro email', 'intro')
+      .addItem('Send intro email', 'intro')
       .addItem('Send weekend email', 'weekly')
       .addToUi();
 }
+
+// A unique function to find out the last row number on your student roster
+
 function getLastRowSpecial(range){
   var rowNum = 0;
   var blank = false;
@@ -48,37 +53,49 @@ function getLastRowSpecial(range){
   };
   return rowNum;
 };
+
 // Send intro email to let student know how to schedule sessions
+
 function intro(email) {
+
   // Select the student roster
 var wb = SpreadsheetApp.getActiveSpreadsheet();
 var sh1 = wb.getSheetByName("Student Roster");
+
 // Display the input box   
 var ui = SpreadsheetApp.getUi();
 var response = ui.prompt(
   'Introductory Email Details', 
   'Which student?' + " (row number)", 
    ui.ButtonSet.OK_CANCEL);
+
 // Process the user's response.
 if (response.getSelectedButton() == ui.Button.OK) {
   var row = response.getResponseText();
+
   // Use row number to collect relevant information
   var name = sh1.getRange("C" + row).getValue();
   Logger.log(name)
   var email = sh1.getRange("D" + row).getValue();
   Logger.log(email)
-  var calendly = YOUR CALENDLY LINK HERE; 
-  var dateTime = sh1.getRange("H" + row).getValues();
+
+// ENTER YOUR CALENDLY LINK 
+
+  var calendly = " "; 
+
+// Enter your name and the display text for your calendly link in the message below
+ 
   var message = []; 
+
     message += "Hi "+ name +"!" + 
-"<br><br>Nice to meet you! My name is YOUR NAME, and I was assigned to be your tutor. I am a graduate of the YOUR AREA OF STUDY Coding Boot Camp so I understand the challenges you're facing in the boot camp very well!<br>" +
+"<br><br>Nice to meet you! My name is <!-- ENTER YOUR NAME-->, and I was assigned to be your tutor. I am a graduate of the YOUR AREA OF STUDY Coding Boot Camp so I understand the challenges you're facing in the boot camp very well!<br>" +
 "<br>I just sent you an invite to our tutoring Slack Team, Tutors & Students. This is where we will be communicating through Direct Message (DM).  Let me know if you don't see the invite or have any issues getting signed up.  Please send me a direct message once you create your account there. You can DM me on that Slack by using my Slack name @YOUR SLACK NAME. Make sure to have that Slack available on your mobile phone so that you can message me if there are problems with wifi, etc.<br>" +
 "<br>Below, I'll provide you with the link to my calendly.  Let me know which of those time slots works best for you and we can schedule a session. If our availability doesn't sync, let me know and I'll see if we can figure something out.</strong><br>" +
 "<br><strong><u>Maximum tutorial sessions per week - our week is Monday - Sunday.</u></strong><br>" +
 "<ul><li>Part-time (6 month boot camp) students are entitled to 1 session per week.</li>" +
 "<li>Full-time (3 month boot camp) students with an assigned group tutor will receive 1 one-on-one session and 1 group session per week.</li>" +
 "<li>Full-time (3 month boot camp) students without a group tutor are entitled to 2 one-on-one sessions per week.</li></ul>" +
-"Schedule your session at: <a href='" + calendly + "'>YOUR CALENDLY LINK HERE</a><br>" + 
+"Schedule your session at: <a href='" + calendly + "'><!--ENTER DISPLAY TEXT OF YOUR CALENDLY LINK HERE--></a><br>" + 
 "<br><mark><strong>On the Calendly page, be sure you have the correct time zone selected in the section labeled 'Times are in'</strong></mark><br>" +
 '<br>Each session takes place over Zoom.us (video chat/screen sharing) and lasts about 50 minutes. I\'ll email you the Zoom.us link the day before our scheduled time. (If you have not used zoom before please join the meeting at least 15 minutes early as it may have you download and install some software.)<br>' +  
 "<br>Again, all I need from you:" +
@@ -88,11 +105,16 @@ if (response.getSelectedButton() == ui.Button.OK) {
 "At the end of the session, I will provide you with a link to a 2 minute evaluation form that you are required to complete.<br><br>" +
 "Slack or email me with any questions.  I'm looking forward to our meeting!<br><br>" +
 "<strong>CC Central Support on all email by always using REPLY ALL.</strong><br><br>" +
-"Sincerely,<br>YOUR NAME";
+"Sincerely,<br><!--YOUR NAME-->";
+
 var subject = 'Data Analytics Boot Camp - Tutorial Available';
+
 // Create the email draft
+
 // .createDraft() is for testing and .sendEmail() can be used instead to mail directly 
+
   GmailApp.createDraft(email, subject, "", {cc: "centraltutorsupport@bootcampspot.com", htmlBody: message});
+
 // Log other responses to input box 
 } else if (response.getSelectedButton() == ui.Button.CANCEL) {
   Logger.log('The user didn\'t want to provide a number.');
@@ -102,27 +124,39 @@ var subject = 'Data Analytics Boot Camp - Tutorial Available';
 };
 
 // Weekend email for tutorial availability
+
 function weekly(email) {
 // Select sheet
   var wb = SpreadsheetApp.getActiveSpreadsheet();
   var sh1 = wb.getSheetByName("Student Roster");
-// ENTER YOUR CALENDLY LINK HERE
+
+// ENTER YOUR CALENDLY LINK HERE!
+
   var calendly = "   " ; 
+
 // Collect email addresses
+
   var emailAddressColumn = sh1.getRange("D2:D").getValues();
   var emailLastRow = getLastRowSpecial(emailAddressColumn);
   var emailList = sh1.getRange(2, 4, emailLastRow, 1).getValues();
   Logger.log(emailList);
+
   // Make lists for each set of data
+
   var nameColumn = sh1.getRange("C2:C").getValues();
   var nameLastRow = getLastRowSpecial(nameColumn);
   var nameList = sh1.getRange(2, 3, nameLastRow, 1).getValues();
+
   //  // Send Alert Email to Multiple Email Addresses
+
   for (var i = 0; i < emailList.length; i++) {
+
+// Enter your name and the display text for your calendly link in the message below
+
     var message = [];
     message += "Hi "+ nameList[i] +"!" +
       "<br><br>I hope you had a great week! Here's the link to schedule another tutoring session if you wish:<br><br>" +
-"<a href='" + calendly + "'>ENTER CALENDLY LINK HERE</a>" + "<br><br><mark><strong>On the Calendly page, be sure you have the correct time zone selected in the section labeled 'Times are in'</strong></mark>" +
+"<a href='" + calendly + "'><!--ENTER DISPLAY TEXT OF YOUR CALENDLY LINK HERE--></a>" + "<br><br><mark><strong>On the Calendly page, be sure you have the correct time zone selected in the section labeled 'Times are in'</strong></mark>" +
 "<br><strong>If our availability doesn't sync, let me know and I'll see if we can figure something out.</strong><br>" +
 "<br><strong><u>Maximum tutorial sessions per week - our week is Monday - Sunday.</u></strong><br>" +
 "<ul><li>Part-time (6 month boot camp) students are entitled to 1 session per week.</li>" +
@@ -132,8 +166,12 @@ function weekly(email) {
 "If you have any questions or none of the times available work for you please let me know and I would be happy to help.<br><br>" +
 "If you would like to schedule regular, recurring sessions at the same day/time each week, just let me know by REPLY ALL and we can work it out.  This is particularly useful if you have a strict schedule so you won't have to compete for time on my calendar.<br><br>" +
 "<strong>CC Central Support on all email by always using REPLY ALL.</strong><br><br>" +
-"Sincerely,<br>ENTER YOUR NAME";
+"Sincerely,<br><!--ENTER YOUR NAME-->";
+
   var subject = "Coding Boot Camp - Tutorial Available";
+
+// .createDraft() is for testing and .sendEmail() can be used instead to mail directly 
+
     GmailApp.createDraft(
       emailList[i],
       subject, "",
@@ -150,6 +188,6 @@ function weekly(email) {
 
 * You can switch the GmailApp.createDraft() to .sendEmail() instead to skip the drafts folder and send right away.
 
-* If you run ino any issues, Slack me @victoryamaykin or use the issues tab.
+* If you run into any issues, Slack me @victoryamaykin or use the issues tab.
 
 **Thanks!**

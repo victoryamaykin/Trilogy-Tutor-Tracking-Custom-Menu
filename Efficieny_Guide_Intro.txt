@@ -1,14 +1,20 @@
 Hi all, 
 
-I wanted to add some custom menu items to the Tutor Tracking Spreadsheet. 
+I wanted to add some custom menu items to the Tutor Tracking Spreadsheet to send the intro and weekly tutorial availability email. 
 
-It will send a separate draft of the weekend email for each student (and CC to Central Support). That way you can verify before sending them out just in case some of them are no longer on your student roster. Using the project triggers, you can have the emails sent automatically to your Drafts folder every week. Please let me know if you have any feedback on the code!
-For your Tutor Tracking Spreadsheet, make sure there's a separate sheet named "Student Roster".
+After entering a new student's information on your roster, you will be able to click on the "Send Emails" menu and select "Send Intro Email".
+The function will send a draft of the email to your Gmail folder labeled "Drafts". 
 
-The detailed requirements and script are located on the README of the Github repo located here:
+For the weekly availability email, the function will send a separate draft of the weekend email for each student (and CC to Central Support). 
+
+That way you can verify before sending them out just in case some of them are no longer on your student roster. 
+
+Using the project triggers, you can have the emails sent automatically to your Drafts folder every week. 
+
+* The detailed requirements and script are located on the README of the Github repo located here:
 
 If you have any questions or issues, please email me at victor.yamaykin@gmail.com, and I'll help you get it working.
 
-Also, please feel free to contribute to the project on Github
+Also, please feel free to contribute to the project on Github. Thanks! 
 
 - Victor Yamaykin, Data Viz Senior Tutor
