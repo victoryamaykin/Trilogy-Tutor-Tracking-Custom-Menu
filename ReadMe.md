@@ -175,6 +175,9 @@ function weekly(email) {
 "If you have any questions or none of the times available work for you please let me know and I would be happy to help.<br><br>" +
 "If you would like to schedule regular, recurring sessions at the same day/time each week, just let me know by REPLY ALL and we can work it out.  This is particularly useful if you have a strict schedule so you won't have to compete for time on my calendar.<br><br>" +
 "<strong>CC Central Support on all email by always using REPLY ALL.</strong><br><br>" +
+"<strong>Boot camp tip! - Our Learning Assistant team is available to help you every day with your curriculum-based questions." +
+" We think you’ll find this resource very helpful as a supplement to tutor support, TA office hours, and class time." +   
+" If you’re unsure how to utilize that resource, please speak to your TAs, Instructor, or Success Manager (SSM / PSM).</strong><br><br>" +
 "Sincerely,<br><!--ENTER YOUR NAME-->";
 
 // ENTER THE SPECIFIC COURSE (DV, FSF, etc.) FOR THE SUBJECT LINE
